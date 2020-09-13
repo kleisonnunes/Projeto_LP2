@@ -2,12 +2,11 @@
 	(cep INTEGER,
 	 cidade VARCHAR(30),
 	 nro INTEGER,
-	 rua VARCHAR(20),
-	 uf CHAR(2),
-	 cpf SERIAL VARCHAR(14),
+	 rua VARCHAR(20),	
+	 cpf VARCHAR(14),
 	 senha VARCHAR(8),
 	 nome VARCHAR(50),
-	 nivel INTEGER,
+         email VARCHAR(50),
 
 	 CONSTRAINT pk_usuario PRIMARY KEY (cpf)
 	);
@@ -41,7 +40,7 @@ CREATE TABLE produto
 	(valorProd NUMERIC(10),
 	 tempFabric NUMERIC(10),
 	 idProd serial NOT NULL,
-	 nomeProd VARCHAR(15),
+	 nomeProd VARCHAR(80),
 	 altura NUMERIC(10),
 	 comprimento NUMERIC(10),
 	 largura NUMERIC(10),
