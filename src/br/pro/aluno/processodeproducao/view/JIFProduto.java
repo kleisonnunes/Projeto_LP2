@@ -69,6 +69,11 @@ public class JIFProduto extends javax.swing.JInternalFrame {
         jtbDados = new javax.swing.JTable();
         jlPesquisa = new javax.swing.JLabel();
         jtPesquisa = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
@@ -78,6 +83,7 @@ public class JIFProduto extends javax.swing.JInternalFrame {
 
         jlNomeProd.setText("Nome do produto");
 
+        jtNomeProd.setEnabled(false);
         jtNomeProd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtNomeProdActionPerformed(evt);
@@ -86,12 +92,14 @@ public class JIFProduto extends javax.swing.JInternalFrame {
 
         jlAltura.setText("Altura");
 
+        jtAltura.setEnabled(false);
         jtAltura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtAlturaActionPerformed(evt);
             }
         });
 
+        jtLargura.setEnabled(false);
         jtLargura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtLarguraActionPerformed(evt);
@@ -102,13 +110,20 @@ public class JIFProduto extends javax.swing.JInternalFrame {
 
         jlTempFabric.setText("Tempo de Fabricação");
 
-        jlValor.setText("Valor R$");
+        jlValor.setText("Valor ");
 
+        jtComprimento.setEnabled(false);
+
+        jtQuantEstoque.setEnabled(false);
         jtQuantEstoque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtQuantEstoqueActionPerformed(evt);
             }
         });
+
+        jtTempFabric.setEnabled(false);
+
+        jtValorProd.setEnabled(false);
 
         jlId2.setText("0");
 
@@ -124,6 +139,7 @@ public class JIFProduto extends javax.swing.JInternalFrame {
         });
 
         jbSalvar.setText("Salvar");
+        jbSalvar.setEnabled(false);
         jbSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbSalvarActionPerformed(evt);
@@ -131,6 +147,7 @@ public class JIFProduto extends javax.swing.JInternalFrame {
         });
 
         jbCancelar.setText("Cancelar");
+        jbCancelar.setEnabled(false);
         jbCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbCancelarActionPerformed(evt);
@@ -138,6 +155,7 @@ public class JIFProduto extends javax.swing.JInternalFrame {
         });
 
         jbEditar.setText("Editar");
+        jbEditar.setEnabled(false);
         jbEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbEditarActionPerformed(evt);
@@ -145,6 +163,7 @@ public class JIFProduto extends javax.swing.JInternalFrame {
         });
 
         jbExcluir.setText("Excluir");
+        jbExcluir.setEnabled(false);
 
         jtbDados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -178,11 +197,22 @@ public class JIFProduto extends javax.swing.JInternalFrame {
 
         jlPesquisa.setText("Pesquisar");
 
+        jtPesquisa.setEnabled(false);
         jtPesquisa.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtPesquisaKeyReleased(evt);
             }
         });
+
+        jLabel1.setText("mm");
+
+        jLabel2.setText("mm");
+
+        jLabel3.setText("mm");
+
+        jLabel4.setText("R$");
+
+        jLabel5.setText("s");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -197,37 +227,45 @@ public class JIFProduto extends javax.swing.JInternalFrame {
                                 .addComponent(jlId, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jlId2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(jlNomeProd, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jtNomeProd))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(jlAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jtAltura))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(jlLargura, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jtLargura))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jlQuantEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jlComprimento, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(jlNomeProd, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jtQuantEstoque)
-                                            .addComponent(jtComprimento, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                            .addComponent(jlValor, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jtNomeProd))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(jlAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jtAltura))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(jlLargura, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jtLargura))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(jlQuantEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jlComprimento, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGap(18, 18, 18)
-                                            .addComponent(jtValorProd))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                            .addComponent(jlTempFabric, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jtTempFabric, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(jtQuantEstoque)
+                                                .addComponent(jtComprimento, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                .addComponent(jlValor, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jtValorProd))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                                .addComponent(jlTempFabric, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jtTempFabric, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jbNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(25, 25, 25)
@@ -264,43 +302,52 @@ public class JIFProduto extends javax.swing.JInternalFrame {
                 .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlAltura)
-                    .addComponent(jtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
                 .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlLargura)
-                    .addComponent(jtLargura, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtLargura, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addGap(5, 5, 5)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlComprimento)
-                    .addComponent(jtComprimento, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(5, 5, 5)
+                    .addComponent(jtComprimento, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlQuantEstoque)
                     .addComponent(jtQuantEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(5, 5, 5)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlTempFabric)
-                    .addComponent(jtTempFabric, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(5, 5, 5)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlValor)
-                    .addComponent(jtValorProd, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbCancelar)
-                    .addComponent(jbSalvar)
-                    .addComponent(jbNovo))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbEditar)
-                    .addComponent(jbExcluir))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlPesquisa))
-                .addGap(20, 20, 20)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jlTempFabric)
+                            .addComponent(jtTempFabric, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(5, 5, 5)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jlValor)
+                            .addComponent(jtValorProd, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jbCancelar)
+                            .addComponent(jbSalvar)
+                            .addComponent(jbNovo))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jbEditar)
+                            .addComponent(jbExcluir))
+                        .addGap(20, 20, 20)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jtPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlPesquisa))
+                        .addGap(20, 20, 20)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5)))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
@@ -335,6 +382,8 @@ public class JIFProduto extends javax.swing.JInternalFrame {
         jbCancelar.setEnabled(false);
         jbEditar.setEnabled(false);
         jbExcluir.setEnabled(false);
+        DefaultTableModel mp = (DefaultTableModel) jtbDados.getModel();
+        mp.setNumRows(0);
 //        jtPesquisa.setEnabled(true);
     }//GEN-LAST:event_jbCancelarActionPerformed
 
@@ -380,20 +429,18 @@ public class JIFProduto extends javax.swing.JInternalFrame {
 
     private void jtPesquisaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtPesquisaKeyReleased
         try {
+            if(jtPesquisa.getText().trim().length()>=1){
             lista = DAO.pesquisar(jtPesquisa.getText());
             DefaultTableModel mp = (DefaultTableModel) jtbDados.getModel();
             mp.setNumRows(0);//limpar a tabela
-            for(ProdutoModel ob : lista){
-//                mp.addRow(new String[]{String.valueOf(ob.getIdProd()),
-//                              ob.getNomeProd(),
-//                              String.valueOf(ob.getAltura()),
-//                              String.valueOf(ob.getLargura()),
-//                              String.valueOf(ob.getComprimento()),
-//                              String.valueOf(ob.getQuantEstoque()),
-//                              String.valueOf(ob.getTempFabric()),
-//                              String.valueOf(ob.getValorProd())});          
+            for(ProdutoModel ob : lista){       
                   mp.addRow(new String[]{""+ob.getIdProd(), ob.getNomeProd(), ""+ob.getAltura(), ""+ob.getLargura(), ""+ob.getComprimento(), ""+ob.getQuantEstoque(), ""+ob.getTempFabric(), ""+ob.getValorProd()});
            }
+           }else if (jtPesquisa.getText().trim().length()==0){
+           DefaultTableModel mp = (DefaultTableModel) jtbDados.getModel();
+            mp.setNumRows(0);
+           }
+            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Ocorreu um erro: "+e.getMessage());
         }
@@ -410,9 +457,18 @@ public class JIFProduto extends javax.swing.JInternalFrame {
                 jtComprimento.setText(jtbDados.getValueAt(linha, 4).toString());
                 jtQuantEstoque.setText(jtbDados.getValueAt(linha, 5).toString());
                 jtTempFabric.setText(jtbDados.getValueAt(linha, 6).toString());
-                jtValorProd.setText(jtbDados.getValueAt(linha, 7).toString());  
+                jtValorProd.setText(jtbDados.getValueAt(linha, 7).toString());
+                jtNomeProd.setEnabled(false);
+                jtAltura.setEnabled(false);
+                jtComprimento.setEnabled(false);
+                jtLargura.setEnabled(false);
+                jtQuantEstoque.setEnabled(false);
+                jtTempFabric.setEnabled(false);
+                jtValorProd.setEnabled(false);
                 jbEditar.setEnabled(true);
                 jbExcluir.setEnabled(true);
+                jbSalvar.setEnabled(false);
+                jbCancelar.setEnabled(false);
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Erro ao selecionar: "+e.getMessage());
@@ -424,6 +480,11 @@ public class JIFProduto extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jtLarguraActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jbCancelar;
     private javax.swing.JButton jbEditar;
