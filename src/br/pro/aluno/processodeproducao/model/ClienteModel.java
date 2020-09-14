@@ -11,7 +11,7 @@ import java.sql.Timestamp;
  *
  * @author Casa
  */
-public class ClienteModel {
+public class ClienteModel extends UsuarioModel{
 
     public Timestamp getDataCadastro() {
         return dataCadastro;

@@ -11,7 +11,7 @@ import java.sql.Timestamp;
  *
  * @author Casa
  */
-public class FuncionarioModel {
+public class FuncionarioModel extends UsuarioModel{
 
     public String getCargo() {
         return cargo;

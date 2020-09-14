@@ -5,6 +5,8 @@
  */
 package br.pro.aluno.processodeproducao.view;
 
+import br.pro.aluno.processodeproducao.model.FuncionarioModel;
+
 /**
  *
  * @author Casa
@@ -32,6 +34,7 @@ public class JFPrincipal extends javax.swing.JFrame {
         jmiCadastros = new javax.swing.JMenu();
         jmiProduto = new javax.swing.JMenuItem();
         jmiUsuario = new javax.swing.JMenuItem();
+        jmiFuncionario = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jmiSair = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
@@ -44,11 +47,11 @@ public class JFPrincipal extends javax.swing.JFrame {
         jdpPrincipal.setLayout(jdpPrincipalLayout);
         jdpPrincipalLayout.setHorizontalGroup(
             jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 569, Short.MAX_VALUE)
+            .addGap(0, 610, Short.MAX_VALUE)
         );
         jdpPrincipalLayout.setVerticalGroup(
             jdpPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 569, Short.MAX_VALUE)
+            .addGap(0, 639, Short.MAX_VALUE)
         );
 
         jmiCadastros.setText("Cadastros");
@@ -68,6 +71,14 @@ public class JFPrincipal extends javax.swing.JFrame {
             }
         });
         jmiCadastros.add(jmiUsuario);
+
+        jmiFuncionario.setText("Funcionario");
+        jmiFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiFuncionarioActionPerformed(evt);
+            }
+        });
+        jmiCadastros.add(jmiFuncionario);
         jmiCadastros.add(jSeparator1);
 
         jmiSair.setText("Sair");
@@ -90,9 +101,7 @@ public class JFPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jdpPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jdpPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -109,6 +118,10 @@ public class JFPrincipal extends javax.swing.JFrame {
      jdpPrincipal.add(janela);
      janela.setVisible(true);
     }//GEN-LAST:event_jmiUsuarioActionPerformed
+
+    private void jmiFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiFuncionarioActionPerformed
+      
+    }//GEN-LAST:event_jmiFuncionarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,8 +162,9 @@ public class JFPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu2;
     private javax.swing.JPopupMenu.Separator jSeparator1;
-    private javax.swing.JDesktopPane jdpPrincipal;
+    public static javax.swing.JDesktopPane jdpPrincipal;
     private javax.swing.JMenu jmiCadastros;
+    private javax.swing.JMenuItem jmiFuncionario;
     private javax.swing.JMenuBar jmiPrincipal;
     private javax.swing.JMenuItem jmiProduto;
     private javax.swing.JMenuItem jmiSair;
