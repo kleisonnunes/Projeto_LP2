@@ -33,7 +33,7 @@ public class JFPrincipal extends javax.swing.JFrame {
         jmiPrincipal = new javax.swing.JMenuBar();
         jmiCadastros = new javax.swing.JMenu();
         jmiProduto = new javax.swing.JMenuItem();
-        jmiUsuario = new javax.swing.JMenuItem();
+        jmiCliente = new javax.swing.JMenuItem();
         jmiFuncionario = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jmiSair = new javax.swing.JMenuItem();
@@ -64,13 +64,13 @@ public class JFPrincipal extends javax.swing.JFrame {
         });
         jmiCadastros.add(jmiProduto);
 
-        jmiUsuario.setText("Usuario");
-        jmiUsuario.addActionListener(new java.awt.event.ActionListener() {
+        jmiCliente.setText("Cliente");
+        jmiCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiUsuarioActionPerformed(evt);
+                jmiClienteActionPerformed(evt);
             }
         });
-        jmiCadastros.add(jmiUsuario);
+        jmiCadastros.add(jmiCliente);
 
         jmiFuncionario.setText("Funcionario");
         jmiFuncionario.addActionListener(new java.awt.event.ActionListener() {
@@ -113,14 +113,16 @@ public class JFPrincipal extends javax.swing.JFrame {
     janela.setVisible(true);
     }//GEN-LAST:event_jmiProdutoActionPerformed
 
-    private void jmiUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiUsuarioActionPerformed
-     JIFUsuario janela = new JIFUsuario();
+    private void jmiClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiClienteActionPerformed
+     JIFCliente janela = new JIFCliente();
      jdpPrincipal.add(janela);
      janela.setVisible(true);
-    }//GEN-LAST:event_jmiUsuarioActionPerformed
+    }//GEN-LAST:event_jmiClienteActionPerformed
 
     private void jmiFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiFuncionarioActionPerformed
-      
+      JIFFuncionario janela = new JIFFuncionario();
+      jdpPrincipal.add(janela);
+      janela.setVisible(true);
     }//GEN-LAST:event_jmiFuncionarioActionPerformed
 
     /**
@@ -164,10 +166,10 @@ public class JFPrincipal extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator1;
     public static javax.swing.JDesktopPane jdpPrincipal;
     private javax.swing.JMenu jmiCadastros;
+    private javax.swing.JMenuItem jmiCliente;
     private javax.swing.JMenuItem jmiFuncionario;
     private javax.swing.JMenuBar jmiPrincipal;
     private javax.swing.JMenuItem jmiProduto;
     private javax.swing.JMenuItem jmiSair;
-    private javax.swing.JMenuItem jmiUsuario;
     // End of variables declaration//GEN-END:variables
 }

@@ -21,6 +21,7 @@ public class JIFUsuario extends javax.swing.JInternalFrame {
 
   UsuarioModel obj;
   UsuarioData DAO;
+  ArrayList<UsuarioModel> lista;
   int acao = 0;
   
     public JIFUsuario() {
@@ -28,6 +29,7 @@ public class JIFUsuario extends javax.swing.JInternalFrame {
       try {
           obj = new UsuarioModel();
           DAO = new UsuarioData();
+          lista = new ArrayList<>();
       } catch (Exception e) {
           JOptionPane.showMessageDialog(this, e.getMessage());
       }
@@ -389,7 +391,7 @@ public class JIFUsuario extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Erro ao selecionar: "+e.getMessage());
         }
     }//GEN-LAST:event_jtbDadosMouseClicked
-        ArrayList<UsuarioModel> lista = new ArrayList<>();
+       // ArrayList<UsuarioModel> lista = new ArrayList<>();
     private void jtPesquisaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtPesquisaKeyReleased
         try {
             if(jtPesquisa.getText().trim().length()>=1){

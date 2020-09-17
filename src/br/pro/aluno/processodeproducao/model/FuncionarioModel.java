@@ -6,6 +6,7 @@
 package br.pro.aluno.processodeproducao.model;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  *
@@ -21,11 +22,11 @@ public class FuncionarioModel extends UsuarioModel{
         this.cargo = cargo;
     }
 
-    public Timestamp getDataContratacao() {
+    public Date getDataContratacao() {
         return dataContratacao;
     }
 
-    public void setDataContratacao(Timestamp dataContratacao) {
+    public void setDataContratacao(Date dataContratacao) {
         this.dataContratacao = dataContratacao;
     }
 
@@ -37,10 +38,10 @@ public class FuncionarioModel extends UsuarioModel{
         this.usuario = usuario;
     }
     private String cargo;
-    private Timestamp dataContratacao;
+    private Date dataContratacao;
     private UsuarioModel usuario;
 
-    public FuncionarioModel(String cargo, Timestamp dataContratacao, UsuarioModel usuario) {
+    public FuncionarioModel(String cargo, Date dataContratacao, UsuarioModel usuario) {
         this.cargo = cargo;
         this.dataContratacao = dataContratacao;
         this.usuario = usuario;
@@ -48,7 +49,7 @@ public class FuncionarioModel extends UsuarioModel{
 
     public FuncionarioModel() {
         cargo = new String();
-        dataContratacao = new Timestamp(new java.util.Date().getTime());
+        dataContratacao = new Date(new java.util.Date().getTime());
         usuario = new UsuarioModel();
     }
     

@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/João/Documents/ProjetosJB/ProcessoDeProducao/src/br/pro/aluno/processodeproducao/data/Banco.sql</file>
+            <file>file:/C:/Users/João/Documents/ProjetosJB/ProcessoDeProducao/src/br/pro/aluno/processodeproducao/data/ProdutoData.java</file>
+            <file>file:/C:/Users/João/Documents/ProjetosJB/ProcessoDeProducao/src/br/pro/aluno/processodeproducao/view/JIFCliente.java</file>
+            <file>file:/C:/Users/João/Documents/ProjetosJB/ProcessoDeProducao/src/br/pro/aluno/processodeproducao/view/JIFProduto.java</file>
+            <file>file:/C:/Users/João/Documents/ProjetosJB/ProcessoDeProducao/src/br/pro/aluno/processodeproducao/model/TelefoneModel.java</file>
+            <file>file:/C:/Users/João/Documents/ProjetosJB/ProcessoDeProducao/src/br/pro/aluno/processodeproducao/data/UsuarioData.java</file>
+            <file>file:/C:/Users/João/Documents/ProjetosJB/ProcessoDeProducao/src/br/pro/aluno/processodeproducao/view/JIFUsuario.java</file>
+            <file>file:/C:/Users/João/Documents/ProjetosJB/ProcessoDeProducao/src/br/pro/aluno/processodeproducao/view/JFPrincipal.java</file>
+        </group>
     </open-files>
 </project-private>

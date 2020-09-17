@@ -517,24 +517,24 @@ public class JIFProduto extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Digite um nome com pelo menos 3 caracteres");
             return false;
         }
-//        if(jtAltura.getText().trim().length() < 0){
-//            JOptionPane.showMessageDialog(this, "Altura inválida");
-//        }
-//        if(jtLargura.getText().trim().length() < 0){
-//            JOptionPane.showMessageDialog(this, "Largura inválida");
-//        }
-//        if(jtComprimento.getText().trim().length() < 0){
-//            JOptionPane.showMessageDialog(this, "Comprimento inválido");
-//        }
-//        if(jtQuantEstoque.getText().trim().length() < 0){
-//            JOptionPane.showMessageDialog(this, "Quantidade inválida");
-//        }
-//        if(jtTempFabric.getText().trim().length() < 0){
-//            JOptionPane.showMessageDialog(this, "Tempo de fabricação inválido");
-//        }
-//        if(jtValorProd.getText().trim().length() < 0){
-//            JOptionPane.showMessageDialog(this, "Valor inválido");
-//        }
+        if(jtAltura.getText().trim().length() < 0){
+            JOptionPane.showMessageDialog(this, "Altura inválida");
+       }
+        if(jtLargura.getText().trim().length() < 0){
+            JOptionPane.showMessageDialog(this, "Largura inválida");
+       }
+        if(jtComprimento.getText().trim().length() < 0){
+            JOptionPane.showMessageDialog(this, "Comprimento inválido");
+        }
+        if(jtQuantEstoque.getText().trim().length() < 0){
+            JOptionPane.showMessageDialog(this, "Quantidade inválida");
+        }
+        if(jtTempFabric.getText().trim().length() < 0){
+            JOptionPane.showMessageDialog(this, "Tempo de fabricação inválido");
+        }
+        if(jtValorProd.getText().trim().length() < 0){
+            JOptionPane.showMessageDialog(this, "Valor inválido");
+        }
         return true;
     }
     
