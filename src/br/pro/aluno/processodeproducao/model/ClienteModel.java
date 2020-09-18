@@ -14,11 +14,11 @@ import java.util.Date;
  */
 public class ClienteModel extends UsuarioModel{
 
-    public Date getDataCadastro() {
+    public String getDataCadastro() {
         return dataCadastro;
     }
 
-    public void setDataCadastro(Date dataCadastro) {
+    public void setDataCadastro(String dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
 
@@ -37,18 +37,18 @@ public class ClienteModel extends UsuarioModel{
     public void setUsuario(UsuarioModel usuario) {
         this.usuario = usuario;
     }
-    private Date dataCadastro;
+    private String dataCadastro;
     private String representa;
     private UsuarioModel usuario;
 
-    public ClienteModel(Date dataCadastro, String representa, UsuarioModel usuario) {
+    public ClienteModel(String dataCadastro, String representa, UsuarioModel usuario) {
         this.dataCadastro = dataCadastro;
         this.representa = representa;
         this.usuario = usuario;
     }
 
     public ClienteModel() {
-        dataCadastro = new Date();
+        dataCadastro = new String();
         representa = new String();
         usuario = new UsuarioModel();
     }

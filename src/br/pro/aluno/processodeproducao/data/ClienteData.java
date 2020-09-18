@@ -21,19 +21,19 @@ import java.util.ArrayList;
 public class ClienteData extends Conexao{
      public ClienteData() throws Exception{}
     public boolean incluir(ClienteModel obj) throws Exception{      
-        String sql="INSERT INTO cliente (datacadastro, representa) "
-                + "values (?,?)";
+        String sql="INSERT INTO cliente (datacadastro, representa, cpf_cli) "
+                + "values (?,?,?)";
         PreparedStatement ps = getConexao().prepareStatement(sql);
-        ps.setDate(1, (Date) obj.getDataCadastro());
+        ps.setString(1,obj.getDataCadastro());
         ps.setString(2, obj.getRepresenta());
-        
+        ps.setString(3,obj.getCpf());
         return ps.executeUpdate()>0;
     }
     
     public boolean editar(ClienteModel obj) throws Exception{
         String sql = "UPDATE cliente SET dataCadastro = ?, representa = ? WHERE cpf_cli = ?";
         PreparedStatement ps = getConexao().prepareStatement(sql);
-        ps.setTimestamp(1, (Timestamp) obj.getDataCadastro());
+        ps.setString(1,obj.getDataCadastro());
         ps.setString(2, obj.getRepresenta());
            
         return ps.executeUpdate() > 0;

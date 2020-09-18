@@ -5,6 +5,7 @@
  */
 package br.pro.aluno.processodeproducao.view;
 
+import br.pro.aluno.processodeproducao.data.ClienteData;
 import br.pro.aluno.processodeproducao.data.UsuarioData;
 import br.pro.aluno.processodeproducao.model.ClienteModel;
 import br.pro.aluno.processodeproducao.model.UsuarioModel;
@@ -21,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class JIFCliente extends javax.swing.JInternalFrame {
     ClienteModel obj;
-    ClienteModel DAO;
+    ClienteData DAO;
     UsuarioData DAO1;
     int acao = 0;
     /**
@@ -30,7 +31,7 @@ public class JIFCliente extends javax.swing.JInternalFrame {
     public JIFCliente() {
         try {
             obj = new ClienteModel();
-            DAO = new ClienteModel();
+            DAO = new ClienteData();
             DAO1 = new UsuarioData();
             initComponents();
         } catch (Exception e) {
@@ -474,10 +475,10 @@ public class JIFCliente extends javax.swing.JInternalFrame {
                             JOptionPane.showMessageDialog(this, "Salvo com sucesso");
                             jbCancelarActionPerformed(evt);
                         }
-                       //  if(DAO.incluir(obj)){
-                         //   JOptionPane.showMessageDialog(this, "Salvo com sucesso");
-                          //  jbCancelarActionPerformed(evt);
-                      //  }
+                         if(DAO.incluir(obj)){
+                            JOptionPane.showMessageDialog(this, "Salvo com sucesso");
+                            jbCancelarActionPerformed(evt);
+                        }
                         else{
                             JOptionPane.showMessageDialog(this, "Erro ao salvar");
                         }
@@ -566,7 +567,7 @@ public class JIFCliente extends javax.swing.JInternalFrame {
         }
         return true;
     }
-    SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+    //SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
      private boolean preencherObjeto() throws ParseException {
         obj.setCpf((jtCpf.getText()));
         obj.setNome((jtNome.getText()));
@@ -576,7 +577,8 @@ public class JIFCliente extends javax.swing.JInternalFrame {
         obj.setRua((jtRua.getText()));
         obj.setNro(Integer.parseInt(jtNro.getText()));
         obj.setEmail((jtEmail.getText()));
-        obj.setDataCadastro( formato.parse(jtDataCadastro.getText()));
+        obj.setDataCadastro((jtDataCadastro.getText()));
+        obj.setRepresenta((jtRepresenta.getText()));
         return true;
     }
 }
